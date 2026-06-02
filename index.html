@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zutly - Share Rides, Save Money, Save Carbon</title>
+    <meta name="description" content="Zutly is a ride-sharing platform connecting drivers and passengers. Share your journey, split costs, and reduce your carbon footprint.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, #5b4cf0 0%, #3f31c4 100%); color: white; padding: 80px 20px 100px; text-align: center; position: relative; overflow: hidden; }
+        .hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: white; border-radius: 50% 50% 0 0; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 14px 32px; border-radius: 14px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .btn-primary { background: white; color: #5b4cf0; }
+        .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); }
+        .logo { width: 80px; height: 80px; border-radius: 20px; margin-bottom: 20px; }
+        .features { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .features h2 { text-align: center; font-size: 2rem; margin-bottom: 48px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .feature-card { padding: 32px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s; }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+        .feature-card p { color: #64748b; font-size: 0.95rem; }
+        .how-it-works { padding: 80px 20px; background: #f8fafc; }
+        .how-it-works h2 { text-align: center; font-size: 2rem; margin-bottom: 48px; }
+        .steps { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
+        .step { display: flex; align-items: flex-start; gap: 20px; }
+        .step-number { width: 48px; height: 48px; border-radius: 50%; background: #5b4cf0; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
+        .step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+        .step p { color: #64748b; }
+        .stats { padding: 60px 20px; text-align: center; }
+        .stats-grid { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; max-width: 800px; margin: 0 auto; }
+        .stat h3 { font-size: 2.5rem; color: #5b4cf0; font-weight: 800; }
+        .stat p { color: #64748b; font-size: 0.9rem; }
+        .safety { padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        .safety h2 { text-align: center; font-size: 2rem; margin-bottom: 16px; }
+        .safety > p { text-align: center; color: #64748b; margin-bottom: 40px; }
+        .safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .safety-item { display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: 12px; background: #f0fdf4; }
+        .safety-item span { font-size: 1.5rem; }
+        .cta { padding: 80px 20px; background: linear-gradient(135deg, #5b4cf0 0%, #3f31c4 100%); color: white; text-align: center; }
+        .cta h2 { font-size: 2rem; margin-bottom: 16px; }
+        .cta p { opacity: 0.9; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        footer { padding: 40px 20px; text-align: center; color: #94a3b8; font-size: 0.85rem; }
+        footer a { color: #5b4cf0; text-decoration: none; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } .stats-grid { gap: 24px; } }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="logo.png" alt="Zutly Logo" class="logo">
+        <h1>Zutly</h1>
+        <p>Share rides, save money, reduce carbon. Find or offer carpool rides near you.</p>
+        <div class="hero-buttons">
+            <a href="https://play.google.com/store" class="btn btn-primary">Download on Play Store</a>
+            <a href="#features" class="btn btn-outline">Learn More</a>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <h2>Why Zutly?</h2>
+        <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon">💰</div><h3>Zero Fees</h3><p>No commissions, no service charges. Pay the driver directly.</p></div>
+            <div class="feature-card"><div class="feature-icon">🌱</div><h3>Eco-Friendly</h3><p>Every shared ride reduces carbon emissions. Track your CO₂ savings.</p></div>
+            <div class="feature-card"><div class="feature-icon">🔒</div><h3>Safe & Verified</h3><p>Verified profiles, emergency contacts, trip sharing via WhatsApp.</p></div>
+            <div class="feature-card"><div class="feature-icon">⚡</div><h3>Instant Booking</h3><p>Book a seat in seconds. Or drivers can review requests first.</p></div>
+            <div class="feature-card"><div class="feature-icon">📱</div><h3>Easy to Use</h3><p>OTP login, auto-fill vehicle details, one-tap booking.</p></div>
+            <div class="feature-card"><div class="feature-icon">⭐</div><h3>Ratings & Reviews</h3><p>Rate drivers and passengers after each ride.</p></div>
+        </div>
+    </section>
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step"><div class="step-number">1</div><div><h3>Sign Up with OTP</h3><p>Enter your phone number, verify with OTP, and you're in.</p></div></div>
+            <div class="step"><div class="step-number">2</div><div><h3>Find or Offer a Ride</h3><p>Search for rides or post your own and set your price.</p></div></div>
+            <div class="step"><div class="step-number">3</div><div><h3>Book & Travel</h3><p>Book seats, message the driver, share trip details for safety.</p></div></div>
+            <div class="step"><div class="step-number">4</div><div><h3>Pay & Rate</h3><p>Pay directly (UPI, cash). Rate each other to build trust.</p></div></div>
+        </div>
+    </section>
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat"><h3>₹0</h3><p>Service Fee</p></div>
+            <div class="stat"><h3>0.12kg</h3><p>CO₂ Saved per km</p></div>
+            <div class="stat"><h3>30s</h3><p>To Book a Ride</p></div>
+        </div>
+    </section>
+    <section class="safety">
+        <h2>Your Safety Matters</h2>
+        <p>Multiple layers of safety built into Zutly.</p>
+        <div class="safety-grid">
+            <div class="safety-item"><span>📞</span> Emergency helpline (100, 108, 112)</div>
+            <div class="safety-item"><span>👥</span> Emergency contacts (up to 3)</div>
+            <div class="safety-item"><span>📤</span> Share trip via WhatsApp</div>
+            <div class="safety-item"><span>✅</span> Verified profiles (Phone, Email, ID)</div>
+            <div class="safety-item"><span>💬</span> In-app messaging & calling</div>
+            <div class="safety-item"><span>⭐</span> Driver & passenger ratings</div>
+        </div>
+    </section>
+    <section class="cta">
+        <h2>Ready to Share Your Ride?</h2>
+        <p>Download Zutly and start saving money while reducing your carbon footprint.</p>
+        <a href="https://play.google.com/store" class="btn btn-primary">Get Zutly on Play Store</a>
+    </section>
+    <footer>
+        <p><a href="privacy-policy.html">Privacy Policy</a> · <a href="mailto:zutoly99+app-support@gmail.com">Contact Support</a></p>
+        <p style="margin-top: 12px;">© 2026 Zutly. All rights reserved.</p>
+    </footer>
+</body>
+</html>
